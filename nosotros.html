@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros - Amasanderia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-amber-50 min-h-screen flex flex-col">
+    <div id="header"></div>
+
+    <main class="flex-1">
+        <section class="bg-gradient-to-r from-amber-800 to-amber-900 text-white py-16">
+            <div class="max-w-7xl mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Sobre Nosotros</h1>
+                <p class="text-lg text-amber-100 max-w-2xl mx-auto">Conoce la historia detrás de Amasanderia y el equipo que hace posible cada día productos artesanales de calidad.</p>
+            </div>
+        </section>
+
+        <section class="max-w-7xl mx-auto px-4 py-16">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600&h=400&fit=crop" alt="Nuestra panadería" class="rounded-xl shadow-lg">
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold text-amber-900 mb-4">Nuestra Historia</h2>
+                    <p class="text-amber-800 mb-4">Amasanderia nació en 1994 como un pequeño negocio familiar con la misión de llevar el sabor auténtico del pan artesanal a cada hogar chileno. Lo que comenzó como una panadería de barrio, hoy se ha convertido en un referente de calidad y tradición.</p>
+                    <p class="text-amber-800 mb-4">Nuestro fundador, Juan Carlos Amasador, aprendió el oficio de su abuelo y ha transmitido esa pasión por el pan artesanal a todo nuestro equipo. Cada producto que sale de nuestro horno lleva consigo décadas de conocimiento y dedicación.</p>
+                    <p class="text-amber-800">Hoy contamos con más de 30 años de experiencia, manteniendo siempre la esencia artesanal que nos caracteriza, pero incorporando las mejores técnicas y los ingredientes más frescos para ofrecer productos de primera calidad.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white py-16">
+            <div class="max-w-7xl mx-auto px-4">
+                <h2 class="text-3xl font-bold text-amber-900 text-center mb-12">Nuestros Valores</h2>
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">🌾</div>
+                        <h3 class="font-bold text-amber-900 mb-2">Calidad</h3>
+                        <p class="text-amber-700 text-sm">Ingredientes seleccionados y procesos artesanales en cada producto.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">❤️</div>
+                        <h3 class="font-bold text-amber-900 mb-2">Tradición</h3>
+                        <p class="text-amber-700 text-sm">Recetas familiares transmitidas por generaciones.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">🤝</div>
+                        <h3 class="font-bold text-amber-900 mb-2">Compromiso</h3>
+                        <p class="text-amber-700 text-sm">Con nuestros clientes, comunidad y medio ambiente.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">🔥</div>
+                        <h3 class="font-bold text-amber-900 mb-2">Frescura</h3>
+                        <p class="text-amber-700 text-sm">Productos horneados diariamente para garantizar frescura.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-7xl mx-auto px-4 py-16">
+            <h2 class="text-3xl font-bold text-amber-900 text-center mb-4">Nuestro Equipo</h2>
+            <p class="text-amber-700 text-center mb-12">Las personas que hacen posible cada producto</p>
+            <div id="team-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+        </section>
+
+        <section class="bg-amber-100 py-16">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div>
+                        <div class="text-4xl font-extrabold text-amber-900">30+</div>
+                        <div class="text-amber-700 mt-1">Años de experiencia</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-extrabold text-amber-900">50k+</div>
+                        <div class="text-amber-700 mt-1">Clientes satisfechos</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-extrabold text-amber-900">100+</div>
+                        <div class="text-amber-700 mt-1">Productos artesanales</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-extrabold text-amber-900">15</div>
+                        <div class="text-amber-700 mt-1">Profesionales</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="js/mock-data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        document.getElementById('header').innerHTML = renderHeader('nosotros');
+        document.getElementById('footer').innerHTML = renderFooter();
+        updateNavAuth();
+
+        document.getElementById('team-grid').innerHTML = MOCK_DATA.team.map(member => `
+            <div class="bg-white rounded-xl shadow-md overflow-hidden text-center">
+                <img src="${member.image}" alt="${member.name}" class="w-full h-64 object-cover">
+                <div class="p-6">
+                    <h3 class="font-bold text-amber-900 text-lg">${member.name}</h3>
+                    <p class="text-amber-600 text-sm mb-3">${member.role}</p>
+                    <p class="text-amber-700 text-sm">${member.bio}</p>
+                </div>
+            </div>
+        `).join('');
+    </script>
+</body>
+</html>

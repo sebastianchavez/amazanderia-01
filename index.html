@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amasanderia - Panadería Artesanal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-amber-50 min-h-screen flex flex-col">
+    <div id="header"></div>
+
+    <main class="flex-1">
+        <section class="relative bg-gradient-to-r from-amber-800 to-amber-900 text-white">
+            <div class="max-w-7xl mx-auto px-4 py-20 md:py-32">
+                <div class="max-w-2xl">
+                    <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">Pan Artesanal<br>Horneado con <span class="text-amber-300">Amor</span></h1>
+                    <p class="text-lg md:text-xl text-amber-100 mb-8">Descubre el sabor auténtico de nuestros productos recién horneados cada día. Tradición y calidad en cada bocado.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="productos.html" class="bg-white text-amber-900 px-8 py-3 rounded-lg font-bold hover:bg-amber-100 transition-colors">Ver Productos</a>
+                        <a href="nosotros.html" class="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white/10 transition-colors">Conócenos</a>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute top-0 right-0 w-1/2 h-full opacity-20 hidden md:block">
+                <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&h=600&fit=crop" alt="" class="w-full h-full object-cover">
+            </div>
+        </section>
+
+        <section class="max-w-7xl mx-auto px-4 py-16">
+            <h2 class="text-3xl font-bold text-amber-900 text-center mb-2">Nuestras Categorías</h2>
+            <p class="text-amber-700 text-center mb-10">Explora nuestra variedad de productos artesanales</p>
+            <div id="categories-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4"></div>
+        </section>
+
+        <section class="bg-white py-16">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="flex items-center justify-between mb-10">
+                    <div>
+                        <h2 class="text-3xl font-bold text-amber-900">Productos Destacados</h2>
+                        <p class="text-amber-700 mt-1">Los favoritos de nuestros clientes</p>
+                    </div>
+                    <a href="productos.html" class="hidden md:inline-flex items-center gap-2 text-amber-800 font-semibold hover:text-amber-900">
+                        Ver todos
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+                <div id="featured-products" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+            </div>
+        </section>
+
+        <section class="max-w-7xl mx-auto px-4 py-16">
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="p-6">
+                    <div class="text-4xl mb-4">🔥</div>
+                    <h3 class="text-xl font-bold text-amber-900 mb-2">Recién Horneado</h3>
+                    <p class="text-amber-700">Productos horneados diariamente con ingredientes frescos y de primera calidad.</p>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl mb-4">🚚</div>
+                    <h3 class="text-xl font-bold text-amber-900 mb-2">Envío Rápido</h3>
+                    <p class="text-amber-700">Entregamos tus pedidos en la puerta de tu casa en el menor tiempo posible.</p>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl mb-4">⭐</div>
+                    <h3 class="text-xl font-bold text-amber-900 mb-2">Calidad Garantizada</h3>
+                    <p class="text-amber-700">Más de 30 años de tradición nos respaldan en cada producto que elaboramos.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-amber-800 text-white py-16">
+            <div class="max-w-4xl mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold mb-4">¿Listo para probar lo mejor?</h2>
+                <p class="text-amber-100 mb-8">Haz tu pedido ahora y recibe productos frescos directamente en tu hogar.</p>
+                <a href="productos.html" class="inline-block bg-white text-amber-900 px-8 py-3 rounded-lg font-bold hover:bg-amber-100 transition-colors">Hacer Pedido</a>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="js/mock-data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        document.getElementById('header').innerHTML = renderHeader('inicio');
+        document.getElementById('footer').innerHTML = renderFooter();
+        updateNavAuth();
+
+        const categoriesGrid = document.getElementById('categories-grid');
+        categoriesGrid.innerHTML = MOCK_DATA.categories.map(cat => `
+            <a href="productos.html?category=${cat.id}" class="bg-amber-100 rounded-xl p-6 text-center hover:bg-amber-200 transition-colors group">
+                <div class="text-4xl mb-2">${cat.icon}</div>
+                <h3 class="font-bold text-amber-900">${cat.name}</h3>
+            </a>
+        `).join('');
+
+        const featuredGrid = document.getElementById('featured-products');
+        const featured = MOCK_DATA.products.filter(p => p.featured);
+        featuredGrid.innerHTML = featured.map(p => renderProductCard(p)).join('');
+    </script>
+</body>
+</html>
